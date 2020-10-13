@@ -1,13 +1,15 @@
 
-// update
+// made four different arrays based on letter type, numeric or special character
 var lowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 var Uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var Numbers = ["1","2","3","4","5","6","7","8","9"]
 var SpecialChar = ["!","#","$","%","&","*","+",",","-",".","/",":",";","<","=",">","?","@","^","`"]
 
+// prompting the user to select how many characters, set up variable called length
 function passwordChoice() {
 var length = parseInt(prompt("How many characters would you like your password to be?"))
 
+//setting the length between 8-128 characters
 if(isNaN(length)===true){
 alert("Please provide password using numbers")
 return
@@ -21,12 +23,13 @@ if(length > 128){
   alert("Your password is too long")
 return 
 }
-// confirm variables for the user to answer
+// confirm variables for the user to answer what they want to use
 var hasLowerCase = confirm("Click OK to use lower case letters") 
 var hasUpperCase = confirm("Click OK to use upper case letters") 
 var hasNumbers = confirm("Click OK to use numbers") 
 var hasSpecialChar = confirm("Click OK to use special characters") 
 
+// if/else statement to run through different types of characters, alert the user if not one is selected
 if(hasLowerCase === false && hasUpperCase === false && hasNumbers === false && hasSpecialChar === false){
 alert("Please select at least one character type")
 return
@@ -49,7 +52,7 @@ return randomElement
 
 }
 
-// update
+// using generate PW function
 function generatePassword() {
  var options = passwordChoice()
  var result = []
