@@ -1,1 +1,3 @@
-# ShaneMcCarthyCOHMWK3
+git # ShaneMcCarthyCOHMWK3
+
+I added code only to the JS file for this homework assignment. Nothing was added to the HTML or CSS files. The objective here was to generate a password that was specific to what the user selected as choices to include in it. For example, either a special character, number or lower / upper case. The password generated was coded to limit between 8 and 128 characters in total. 
